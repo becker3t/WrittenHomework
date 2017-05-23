@@ -13,3 +13,5 @@ Design Patterns
 MVC
 MVP
 M V VM
+
+AAPT - Android Asset Packaging Tool
