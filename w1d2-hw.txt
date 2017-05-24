@@ -1,0 +1,43 @@
+What is Android?
+Android is a Linux based, open source operating system used primarily for portable phone and tablet devices.
+Android Inc. was founded in 2003 and was bought out by Google in 2005.
+Android versions are named after sugary treats and go in alphabetical order (cupcake, donut, eclair, froyo, gingerbread, honeycomb, icecreamsandwich, jellybean, kitkat, lollipop, marshmellow, nougat, oreo)
+
+How do you track memory leaks?
+Memory leaks happen when an instance of an object remains after the lifetime of the activity using said instance.
+If the instance is still bound in any way beyond the lifetime of the activity that created it, and the garbage collectore fails to deallocate the memory, it can lead to an OutOfMemoryException.
+In order to track memory leaks, Android Studio provides a tool called Android Monitor that keeps track of memory allocation.
+In the Android Monitor, you can look into the leaked activity's memory heap and check out the reference tree that will show every bit of allocated memory in use
+
+
+What are the ways to debug a program?
+1. Using log statements and checking inside of the logcat.
+	logcat can be filtered by tag, processes, 
+2. Set breakpoints and run the debugger.  From there you can comb through your code line by line, evaluating all allocated variables as their values change.
+	From there, you can look through the object trees of each variable.
+
+What is Android's architecture? (going from bottom layer to top)
+Linux Kernel: the base architecture for the underlying hardware of the device (power, usb, wifi, display, etc...)
+HAL (Hardware Extraction Layer): a set of several library modules that allow upper level modules to use the underlying kernel
+ART (Android RunTime): Replaced the Dalvik VM. Art is the runtime environment for the Android operating system. Designed to have minimal memory footprint, launches several virtual machines to run DEX files, which is a bytcode format that Android applications are translated into while being compiled into an APK.  There are some key features to ART that distinguishes it from Dalvik, which I will dexcribe in the next question.
+Native C/C++ libraries: Because Android is built off of Linux, some native C and C++ libraries are needed in order for certain Android environment tools to work (like ART and HAL).
+Java API: The entire development side of Android is built off the Java framework.
+System Apps: The application layer of the Android architecture.  All user interactivity happens through this layer.
+
+What is the difference between Dalvik and ART?
+Dalvik is the old Android runtime VM environment that has since been deprecated after Android Lollipop to be replaced with ART (KitKat allowed for developers to use either Dalvik or ART)
+One of the primary differences between the two has to do with when an application's assets are downloaded onto memory. Dalvik uses Just In Time compilation vs ART which uses Ahead Of Time compilation. This means that Dalvik will compile an app into local memory when the app is launched, vs. ART which compiles the app and stores into local memory when the app is installed onto the phone from the begining.
+This allows for ART to be better for performance on the phone because it doesn't require the device to compile and allocate the application during launch and deallocate the app after it has been closed. (if there is already a lot of memory in use, reopening the app could cause the app to feel laggy).  Rather, ART compiles and stores the application assets locally once and keeps it stored locally following the installation.
+
+What are 9-patch images?
+Bitmap images that automatically resize and scale based on the contents of the view or the size/resolution of the screen
+
+How do you support phones and tablets?
+Android has a system that allows for developers to design UI that can be easily scaled from small screens to large screens.
+It requires the use of easily scaleable views like fragments, as well as image files for screens with varying resolutions (smaller resolution uses smaller images, vs. a larger resolution that needs larger images in order to scale properly and not look blurry.
+
+How do you support multiple languages?
+Android requires that all String values be placed into string resource files rather than being hard coded.
+This allows a developer to easily change a String value that may be referenced several times in his application, but it also allows for a developer to create multiple String resource files for different languages.
+Android will automatically use a different string resource file based on the phones local language settings.
+(if there is a spanish string resource file, than all phones set to spanish will automatically use that spanish resource file)

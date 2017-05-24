@@ -21,8 +21,36 @@ used in a case where all implementations share some common logic universally, bu
 Java
 
 Java Collection Framework & Arrays
-Generics
+Three Generic types of collections
+Ordered Lists: stores items of the same class in a specific order. Format(int index, Obj value)
+Dictionaries/ Maps: stores items in no particular order using key value pairs. Format (Obj key, Obj value)
+Sets: unordered collections where similar objects are not allowed
 
+Generics
+allows the ability to handle several types of collections (collections of strings, ints, doubles, etc...) using one single method or class
+code sample of generic class from internet:
+public class Box<T> {
+   private T t;
+
+   public void add(T t) {
+      this.t = t;
+   }
+
+   public T get() {
+      return t;
+   }
+
+   public static void main(String[] args) {
+      Box<Integer> integerBox = new Box<Integer>();
+      Box<String> stringBox = new Box<String>();
+    
+      integerBox.add(new Integer(10));
+      stringBox.add(new String("Hello World"));
+
+      System.out.printf("Integer Value :%d\n\n", integerBox.get());
+      System.out.printf("String Value :%s\n", stringBox.get());
+   }
+}
 
 
 Design Patterns
