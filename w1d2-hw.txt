@@ -12,7 +12,7 @@ In the Android Monitor, you can look into the leaked activity's memory heap and 
 
 What are the ways to debug a program?
 1. Using log statements and checking inside of the logcat.
-	logcat can be filtered by tag, processes, 
+	logcat can be filtered by tag, processes, etc...
 2. Set breakpoints and run the debugger.  From there you can comb through your code line by line, evaluating all allocated variables as their values change.
 	From there, you can look through the object trees of each variable.
 
