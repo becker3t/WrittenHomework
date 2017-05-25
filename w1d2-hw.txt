@@ -31,7 +31,8 @@ One of the primary differences between the two has to do with when an applicatio
 This allows for ART to be better for performance on the phone because it doesn't require the device to compile and allocate the application during launch and deallocate the app after it has been closed. (if there is already a lot of memory in use, reopening the app could cause the app to feel laggy).  Rather, ART compiles and stores the application assets locally once and keeps it stored locally following the installation.
 
 What are 9-patch images?
-Bitmap images that automatically resize and scale based on the contents of the view or the size/resolution of the screen
+Bitmap images that automatically resize and scale based on the contents of the view or the size/resolution of the screen.
+The image is split into 9 "squares", where the corners remain static, but the rest of them can be stretched and scaled accordingly.
 
 How do you support phones and tablets?
 Android has a system that allows for developers to design UI that can be easily scaled from small screens to large screens.
