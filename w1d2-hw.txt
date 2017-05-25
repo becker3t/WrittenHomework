@@ -15,6 +15,7 @@ What are the ways to debug a program?
 	logcat can be filtered by tag, processes, etc...
 2. Set breakpoints and run the debugger.  From there you can comb through your code line by line, evaluating all allocated variables as their values change.
 	From there, you can look through the object trees of each variable.
+3. Version control.  You can compare an older working version of the program to the newer buggy version and try to find any glaring differences that may be causing the bug.
 
 What is Android's architecture? (going from bottom layer to top)
 Linux Kernel: the base architecture for the underlying hardware of the device (power, usb, wifi, display, etc...)
