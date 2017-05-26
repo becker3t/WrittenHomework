@@ -1,0 +1,51 @@
+What is an Activity?
+An activity represents a single screen in an Android application
+Every new screen in the app will require a new activity
+Every Activity is accompanied with an xml resource that lays out the UI for the activity
+
+How can I manage rotation changes?
+You can use the onConfigurationChanged method, which is called every time the app orientation is changed.
+You can also lock the orientation of the app to either landscape or portrait mode inside of the Android Manifest file.
+
+What is the Android lifecycle?
+A set of overrideable functions called by the Android API during the various stages of an app's lifetime.
+OnCreate, OnStart, OnResume, OnPause, OnStop, OnDestroy, and OnRestart
+
+If I'm in Activity A and I enter Activity B, what are the callbacks triggered?
+In Activity A, OnPause and OnStop are triggered.  The Activity is stopped, but remains in memory until the app is destroyed.
+In Activity B (assuming this is the first time B has been opened), OnCreate -> OnStart -> OnResume
+
+If I'm in Activity A, then I enter Activity B and then press the back button, what are the callbacks triggered?
+Activity A, OnPause -> OnStop
+Activity B, OnCreate -> OnStart -> OnResume
+back button pushed
+Activity B, OnPause -> OnStop
+Activity A, OnRestart -> OnStart -> OnResume
+
+How can I send information from an Activity to another Activity?
+Using the Intent class, you can use the method putExtra() to add any primitive or custom objects to that intent instance.
+That data is accessible in the following activity that the intent is launching.
+
+What is the difference between an Activity and a Fragment?
+To put it simply, they are similar, but a fragment can be thought of as a sub-activity. It has it's own view and has a similar lifecycle to
+an activity, but fragments are put inside of an activity.  This allows a developer to have several different views and processes
+in one screen (activity), while keeping all of the views and source code seperate from each other and organized.
+
+When is the onDestroy method called?
+When the user manually force closes the application. In most cases when a user navigates away from an activity, it is not destroyed.  Rather, it
+stays allocated in memory to save the current app state and conserve processing power when the activity is re-opened
+
+How can you guarantee backwards compatibility in Android?
+Set the app's minimum API, which will keep you from using any features that are not available in API versions lower than the minimum allowed.
+
+What are the lifecycle callbacks that are guaranteed to happen in an Activity?
+In the full life-cycle, OnCreate -> OnStart -> OnResume -> app is running -> OnPause -> OnStop -> OnDestroy
+The only one that isn't guaranteed is OnRestart.
+
+Can I destroy an Activity?
+When and intent is launched and a new activity is starting, the old activity can call the finish() function to get
+the old activity to call its OnDestroy()
+
+I want to get information back from an Activity, how can I do that?
+When an Activity is launched with an Intent object, information inside of that intent can be accessed using the getExtras method.
+That returns a Bundle which contains all of the information sent from the previous activity
