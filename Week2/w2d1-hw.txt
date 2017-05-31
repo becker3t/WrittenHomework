@@ -1,1 +1,52 @@
 What is Gitflow (Methodology)?
+    Gitflow is the branching model for git.  Not sure how much more there is to say about this...
+
+VOLATILE KEYWORD
+    This keyword indicates that the variable can be modified by multiple threads.  It means that the variable gets stored in Main Memory,
+    rather than cached memory from individual threads. This gaurantees that two threads accessing the same variable will access the same data.
+
+SYNCHRONIZED KEYWORD
+    Methods and variables declared Synchronized cannot be accessed at the same time by multiple threads. Rather, one thread accesses a synchronized
+    method, any others trying to access it are put in a "suspended" state.  This pauses the thread and waits for the thread currently working
+    on the synchronized code to finished.
+
+TRANSIENT KEYWORD
+    Transient variables are marked transient to keep them from being serialized into a serialized byte array.  A serializable object that contains
+    multiple variables will automatically serialize and store the values into the byte array unless they are marked transient.
+
+MAPS
+    Non-serialized data structure that stores key, value pairs.  Keys and values can be of any type (although all keys have to share the same type
+    with each other and vice-versa), but there cannot be duplicate keys.
+
+LIST
+    A serialized data set that stores a finite amount of data all of the same type. Indeces start at 0 and iterate up from there. 
+
+SET
+    A non-serialized data set that stores multiple values of the same type, but contains no duplicates.  I believe can be iterated through 
+
+MAPS VS LIST VS SET
+    All used in different scenarios.
+    Maps are used when you want a collection of indexed values, but they don't necessarily need to be in a specific order.
+    Lists are used when you want a collection of values to be in a certain order.
+    Sets are used when you don't care what order the objects are in and don't need to access said object via a specific key.
+
+ARRAYLIST VS LINKEDLIST
+    Data structures that behave similarly (serialized, store items of the same type).  However, linked list is implemented as a double linked list.
+    This allows Linked Lists to be more efficient when adding and removing values.
+
+CONCURRENT PACKAGE (CONCURRENT HASHMAP, ATOMIC VARIABLES)
+    Concurrency is the ability for two threads to be able to access a value at the same time.  So a concurrent HashMap is a hashmap that is reachable
+    by more than one thread at once.
+
+Make an app.
+MainActivity (Create a new contact)
+edtitext - firstName, lastName
+button - photo -> starts camera to take pic -> save pic internally (create file)
+button - save -> save contact to SQLite (SQLiteOpenHelper)
+button - list -> start new ListActivity
+
+ListActivity
+one textview that appends every contact in the database
+vutton to go back to main
+
+push to github

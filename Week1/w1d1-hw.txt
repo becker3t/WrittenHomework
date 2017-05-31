@@ -5,6 +5,11 @@ protects data.  use getters and setters to access and modify private variables
 Polymorphism
 a result of inheritance.  Allows a class to be referred to as itself or as an instance of its parent classes.
 
+Shape - parent
+Circle - child, extends Shape
+Shape s = new Shape();
+Shape c = new Circle();
+
 Inheritance
 Any class extending a parent class will inherit all methods and variables from its parent class.  Used with the key word "extends"
 
