@@ -1,0 +1,27 @@
+Homework
+
+(HW1)
+Extend on app worked on in class.
+
+Add "Bye" buttons to each fragment.
+
+(HW2)
+What is a Service?
+
+What are the types of Services in Android?
+
+What is an Intent Service?
+
+Service vs. IntentService?
+
+What is AIDL?
+
+What are BoundServices?
+
+What is the IBinder?
+
+What is the SyncAdapter?
+
+What are Services used for?
+
+What is your favorite Android App?
