@@ -1,0 +1,44 @@
+Homework
+
+Create app that has navigation drawer.
+
+Review design patterns
+http://avajava.com/tutorials/categories/design-patterns
+
+CREATIONAL DESIGN PATTERN
+
+Singleton:
+    A class that is designed to only have one instance of itself at a time. This is accomplished using a static variable that represents an instance
+    of that class.  The constructor remains empty, while there is a corresponding method getInstance() method that will return the instance of that
+    static variable.  If the variable is currently null, getInstance creates the instance there and will allow it to be shared by any class that
+    wants to access the singleton.
+
+    Example: A class that stores data in real time that will be accessed by multiple threads.  It gaurantees each thread has access to the same data
+    at the same time.
+
+Factory:
+    A creational design pattern that instantiates and returns an object based on the data passed into the factory. The different types of objects that 
+    are returned from a factory typically are subclasses of a common parent class.
+
+    Example: A machineFactory class that can create multiple machinges extending type Machine (ATM machine, Vending machine, etc...)
+
+Abstract Factory
+    Works similarly to a Factory as far as the way it is designed, but returns specific factories to be used later.
+
+    Example: an AnimalFactory that can give you a Mammalfactory (to create dogs, cats, humans), or a ReptileFactory (snake, lizard, alligator)
+
+Builder
+    A design pattern used to create complex objects.  It is designed to be able to create multiple different objects only using the object type and
+    content of the object.
+
+    Example: I dunno...
+
+Prototype
+    A design pattern which allows a new object to be created using a clone of an existing object.Use if an original object is created with a resource
+    such as a data stream that may not be available at the time that a clone of the object is needed.
+
+    Example: You need to store a pair of Programmer objects into a pairedProgrammer class, but only have information for one of the programmers
+    currently.  You can clone the first programmer, store the clone, and replace the data when you have the second programmer's data.
+
+STRUCTURAL DESIGN PATTERN
+
