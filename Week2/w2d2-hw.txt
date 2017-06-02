@@ -22,16 +22,23 @@ Factory:
 
     Example: A machineFactory class that can create multiple machinges extending type Machine (ATM machine, Vending machine, etc...)
 
+    Answer for interview: Pattern that creates objexts that are related to each other.
+
 Abstract Factory
     Works similarly to a Factory as far as the way it is designed, but returns specific factories to be used later.
 
     Example: an AnimalFactory that can give you a Mammalfactory (to create dogs, cats, humans), or a ReptileFactory (snake, lizard, alligator)
 
+    Answer for interview: It's a factory for factories. Designed to create factories of similar categories, but have some key differences.
+
 Builder
     A design pattern used to create complex objects.  It is designed to be able to create multiple different objects only using the object type and
     content of the object.
 
-    Example: I dunno...
+    Example: Creating a person object, but the class requires 15 parameters (or more). You can create a Builder class that allows you to easily create
+    a person and manually set the attributes you need to store in setter methods, rather than defining every attribute in the constructor.
+
+    Answer for interview: Solves the "Too many arguments in a constructor exception". Simplifies the creation of complex objects.
 
 Prototype
     A design pattern which allows a new object to be created using a clone of an existing object.Use if an original object is created with a resource
@@ -39,6 +46,8 @@ Prototype
 
     Example: You need to store a pair of Programmer objects into a pairedProgrammer class, but only have information for one of the programmers
     currently.  You can clone the first programmer, store the clone, and replace the data when you have the second programmer's data.
+
+    Answer fo interview: When cloning a large object it simplifies the duplication process.
 
 STRUCTURAL DESIGN PATTERN
 
