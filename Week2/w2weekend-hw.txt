@@ -1,0 +1,20 @@
+﻿HW
+
+Review yesterday's homework! Answer questions better.
+
+HW 2
+
+Create an app that has an IntentService that downloads a file.  Use a ResultReceiver (which is used within IntentService).
+
+HW 3
+
+Create a service that plays an mp3 file. Use the MediaPlayer class.
+
+HW 4
+
+Start Material Design Course in Udacity. Finish first 3 modules (Fundementals, Surfaces, Bold graphic Design).
+Do one module per day.
+
+HW 5
+
+Watch videos Luis gave us and write a summary for each... Also listen to the podcast Luis sent and write a summary (Listen to one a day).

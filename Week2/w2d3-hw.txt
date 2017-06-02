@@ -1,4 +1,4 @@
-Homework
+﻿Homework
 
 (HW1)
 Extend on app worked on in class.
@@ -8,38 +8,61 @@ Add "Bye" buttons to each fragment.
 (HW2)
     What is a Service?
 
-An application component that performs long running operations in the background. Provides no user interface. When an app starts a service, it begins running in the background even while the user navigates away from the app or puts the phone in rest mode.
+An application component that performs long running operations in the background. Provides no user interface. When an app starts a service, it begins 
+running in the background even while the user navigates away from the app or puts the phone in rest mode. Must be destroyed manually.
+****Runs on the main thread
 
     What are the types of Services in Android?
 
-Scheduled: Allows you to schedule services to activate later at a scheduled time. Created using an api like the JobScheduler API which allows you to schedule jobs and specify the requirements of the service easily.
+Scheduled: Allows you to schedule services to activate later at a scheduled time. Created using an api like the JobScheduler API which allows you to 
+schedule jobs and specify the requirements of the service easily.
 
-Started: Started services run in the background indefinitely no matter if the component creating the service is destroyed. These services perform a single operation with no resulting callback. Example, downloading or uploading a file to the network. Activated using startService() method.
+Started: Started services run in the background indefinitely no matter if the component creating the service is destroyed. These services perform a 
+single operation with no resulting callback. Example, downloading or uploading a file to the network. Activated using startService() method.
 
-Bound: offers a client-server interface that allows components to interact with the service, send requests, receive results, and even do so across processes with interprocess communication. Started with the bindService() method.  Only run while there is at least one application component attached to it. If there isn’t the service is destroyed.
+Bound: offers a client-server interface that allows components to interact with the service, send requests, receive results, and even do so across 
+processes with interprocess communication. Started with the bindService() method.  Only run while there is at least one application component attached 
+to it. If there isn’t the service is destroyed.
 
     What is an Intent Service?
-Called in most Service using cases. It is the base class for Services and it handles services requests (In the form of intents), which are handled in a “Work Queue Processor”. It handles each intent when needed in the background and stops when there is no more data to process.
+Called in most Service using cases. It is the base class for Services and it handles services requests (In the form of intents), which are handled in 
+a “Work Queue Processor”. It handles each intent when needed in the background and stops when there is no more data to process.
+
+****Runs outside of the main thread.
 
     Service vs. IntentService?
-Services are more broad implementations than IntentServices. Services allow developers more control of longer-running background operations to set up, while IntentServices are used more for quick background operations that the developer doesn’t need to have total control over (fire-and-forget operations).
+Services are more broad implementations than IntentServices. Services allow developers more control of longer-running background operations to set up,
+while IntentServices are used more for quick background operations that the developer doesn’t need to have total control over (fire-and-forget 
+operations).
 
     What is AIDL?
-Android Interface Definition Language. Allows developers to define an interface that both the client and service can communicate to each other through using Interprocess Communication (IPC). Used to handle Services and Binders that want to share or access data from another separate application (Remote Procedure Calls, RPC’s).
+Android Interface Definition Language. Allows developers to define an interface that both the client and service can communicate to each other through
+using Interprocess Communication (IPC). Used to handle Services and Binders that want to share or access data from another separate application 
+(Remote Procedure Calls, RPC’s).
 
     What are BoundServices?
-The server-side in the client-server interface. Allows components (activities or fragments) to bind to a service, send requests, receive responses and perform IPC’s with other applications. They live and die to run background components, but do not last indefinitely.
+The server-side in the client-server interface. Allows components (activities or fragments) to bind to a service, send requests, receive responses 
+and perform IPC’s with other applications. They live and die to run background components, but do not last indefinitely.
 
     What is the IBinder?
-An interface that allows for IPC’s, or to put simply, allows for communications from application to application. Since Android is designed to keep apps separate from one another and not allow direct access from one app to the other, IBinder is the interface that allows a developer to make an exception when needed. 
+An interface that allows for IPC’s, or to put simply, allows for communications from application to application. Since Android is designed to keep 
+apps separate from one another and not allow direct access from one app to the other, IBinder is the interface that allows a developer to make an 
+exception when needed. 
 
     What is the SyncAdapter?
-A component that encapsulates the code for tasks that can transfer data between a device and a server. You tell the SyncAdapter what to do and when to do it and triggers whatever result it is programmed to.
+A component that encapsulates the code for tasks that can transfer data between a device and a server. You tell the SyncAdapter what to do and when 
+to do it and triggers whatever result it is programmed to.
+
+** Made up of 5 components.
+
 
     What are Services used for?
-Services are used when and application needs to complete a task without the user being engaged in the app. For example, an alarm. You set an alarm, create a service that lies dormant (but is still running, whether or not the app is currently open), and wakes itself up when certain conditions are met.
+Services are used when and application needs to complete a task without the user being engaged in the app. For example, an alarm. You set an alarm, 
+create a service that lies dormant (but is still running, whether or not the app is currently open), and wakes itself up when certain conditions are 
+met.
 
     What is your favorite Android App?
 Going by most useful, Soundhound.  I like music, so when i=I find a song I like but don’t know the name, Soundhound works great.
 
-Going by most used, RedditIsFun. I go on reddit a lot, and their native app sucks. This is a third party reddit app that has a much better UX design in my opinion.
+Going by most used, RedditIsFun. I go on reddit a lot, and their native app sucks. This is a third party reddit app that has a much better UX design 
+in my opinion.
