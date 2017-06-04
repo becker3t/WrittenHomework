@@ -9,6 +9,7 @@ Create an app that has an IntentService that downloads a file.  Use a ResultRece
 HW 3
 
 Create a service that plays an mp3 file. Use the MediaPlayer class.
+done
 
 HW 4
 
@@ -18,3 +19,9 @@ Do one module per day.
 HW 5
 
 Watch videos Luis gave us and write a summary for each... Also listen to the podcast Luis sent and write a summary (Listen to one a day).
+
+Video1: What's new in Android? '17
+In the introduction they cover the new developer features available to provide better UI (new image and color formats that are accepted, and a new way to overlay videos being played on the user's homescreen). They cover new features in the MediaPlayer class. They provided features for the Animator that gives more control over the animations playing to the developer (like seeking through an animation or reversing it). Also they added functionality to Animators that allow developers to control animations by velocity, allowing for more responsive and aestheticly pleasing animations. They added a new font resource directory to make it easier to control and change font styles. THIS IS AWESOME they no longer require casting for the view.findViewById method. New feature allow user to block specific notifications from different apps to keep the notification drawer from crowding up.
+
+Video2: Speeding up your Android Gradle Builds.
+The Google team basically found a bunch of developers with complaints and difficulties over their slow build times and found a bunch of solutions to avoid common problems that delay build times and ways to fix them.
