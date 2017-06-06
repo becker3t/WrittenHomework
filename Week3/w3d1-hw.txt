@@ -1,0 +1,79 @@
+What are these Libraries? What do they do? How do you implement them?
+
+HTTPUrlConnection
+The native feature in Android to open an inputStream and connect it to a specific URL. It works, but there are 3rd party libraries that make the process simpler.
+
+OKHttpClient
+A 3rd party library that supports Android2.3 and above. It's designed to allow all requests from the same host to share the same socket (freeing up socket space on the server being called to, reducing latency). Responses are stored in an easily downloadble GZip file, and features response caching for reapeat requests (doesn't have to call the server all over again for a request that was already made).
+
+implementation:
+dependencies {
+    ...
+    compile 'com.squareup.okhttp3:okhttp:3.8.0'
+}
+
+Volley
+An HTTP library that makes networking on Android easier and faster. It handles automatic scheduling of Network requests, can handle multiple network connections, response caching, allows request prioritization over others, is easily customizable, and allows you to easily populate the UI thread with data fetched from these asynchronous tasks. It is designed to perform RPC calls adn can support multiple different RPC protocols with varying return types very easily.
+
+gradle implementation:
+dependencies {
+    ...
+    compile 'com.android.volley:volley:1.0.0'
+}
+
+
+Retrofit2
+A library that turns HTTP API's into a Java service. A Retrofit class generate an implementation of the Github Service interface. Calls can then be created from the Github service to generate HTTP requests (synchronous and asynchronous). Annotations of the object can be used to describe the HTTP request:
+URL and query parameter support
+Object conversion to request body (JSON, XML, protocol buffers)
+Multipart request body and file upload (Can perform multiple operations in one request?)
+
+gradle implementation:
+dependencies {
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+}
+
+Converters
+Retrofit is pluggable allowing different serialization formats and their libraries to be used for converting Java types to their HTTP representation and parsing HTTP entities back into Java types. This is how Retrofit allows you to customize the output of your HTTP requests into various Java Object notations.
+
+Gson: com.squareup.retrofit2:converter-gson
+Jackson: com.squareup.retrofit2:converter-jackson
+Moshi: com.squareup.retrofit2:converter-moshi
+Protobuf: com.squareup.retrofit2:converter-protobuf
+Wire: com.squareup.retrofit2:converter-wire
+Simple XML: com.squareup.retrofit2:converter-simplexml
+Scalars (primitives, boxed, and String): com.squareup.retrofit2:converter-scalars
+
+How do you create Android Library files?
+In Android Studio, open a new module. If you want to include any code from another existing library, you can include it in your build.gradle file. You can then export your library to an AAR or JAR file, which can then be added into any project by importing the AAR or JAR and compiling it in the app.gradle file.
+
+What is FireBase?
+A Library that makes storing user generated content (Documents, pictures, etc...) directly to Google Cloud Storage, allowing you to free up local space on your applications. Handles everything securely and can be supported from mobile device to web browsers.
+
+Firebase account: beckertdev@gmail.com
+
+gradle implementation:
+dependencies {
+    compile 'com.google.firebase:firebase-storage:10.2.6'
+}
+
+Testing:
+JUnit
+JUnit is a simple framework to write repeatable tests. It is an instance of the xUnit architecture for unit testing frameworks. Tests Java files in Android app.
+
+apply plugin: 'java'
+
+dependencies {
+  testCompile 'junit:junit:4.12'
+}
+
+Mockito
+A unit testing library that allows users to easily create mock objects and test specific parts of code at a time (rather than everything at once), and confirming whether the results were expected or unexpected.
+
+Espresso
+A framework that allows you to write automated UI behavior testing in Android.
+
+dependencies {
+    // Other dependencies ...
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+}
