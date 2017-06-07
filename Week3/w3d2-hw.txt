@@ -1,0 +1,15 @@
+HW
+
+Using Retrofit2 and RandomUserAPI, creat an app that displays Name, Adress, and Email. On the bottom have a button to fetch another random user.
+
+Use
+ArrayList<Result> usersFetched;
+usersFetched.add(result);
+
+Add two buttons, no functionality: ToListView, ToRecyclerView
+
+Research (what are they? what code components are needed? main differences between the two.)
+
+ListView
+
+RecyclerView
