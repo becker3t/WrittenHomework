@@ -11,5 +11,18 @@ Add two buttons, no functionality: ToListView, ToRecyclerView
 Research (what are they? what code components are needed? main differences between the two.)
 
 ListView
+A subclass of view that displays a list of scrollable items. An adapter class that takes in data and dynamically fills the list as needed. Adapters point the data to the views of the list's corresponding children, and can also handle the click listeners for each item in the list. There are a few different standard ways to make simple ListViews with simple adapters, but complex ones can be made using custom views and custom listAdapters. Lists can be made directly from a query using a Loader.
+
+Lists items that will be presented vertically.
+Do not enforce ViewHolder pattern by default (Viewholder: a design pattern that is used to speed up rendering of a list), increasing the amount of memory required. View Holders can still be implemented in a Listview.
+Scrolling is not as smooth.
 
 RecyclerView
+A flexible view that allows you to display a limited amount of data from a large data set. Allows you to dynamically instantiate select bits of a data set at a time, allowing for better performance when comparing to an app that allocates every item in the data set at once. It works for a small set of a few dozen items, but for thousands a recyclerview is more efficient because it can allocate and deallocate smaller parts of a large data set in real time. Also requires an adapter in order to populate the children views with the data being passed in.
+
+ViewHolder is mandatory and standard with RecyclerViews.
+Allows the pohone to only render and instantiate the views that are present on the screen, plus two on the bottom and two on the top.
+Implements LayoutManagers: LinearLayoutManager (vertical, horizontal), GridLayoutManage, StaggeredGridLayoutManager.
+Has its own custom animation and custom item decorators.
+
+RecyclerViews were created to offer a better alternative to ListViews with larger data sets.
