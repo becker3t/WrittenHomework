@@ -1,0 +1,33 @@
+HW
+
+Continue the app from yesterday and add the ListView and RecyclerView
+
+Make new app that uses RecyclerView GridLayoutManager
+
+Make new app that uses the RecyclerView StaggeredGridLayoutManager
+
+Research:
+Picasso and Glide libraries. Which is better? What's the difference between them? What do they do?
+
+Picasso:
+A library that simplifies downloading and displaying images from a url into one line of code. It works by simply passing in context, the image url, and an imageView to display it with. It handles all memory and disk chaching, handles download cancelations, and complex image transformations while using minimal memory.
+
+Glide:
+An open-source image fetching interface that allows for quick and easy fetching, decoding, and displaying video stills, images and animated gifs. Like Picasso, Glide handles all memory and disk caching, handles cancelations, and several different media file types.
+
+The main difference etween the two:
+Picasso is exclusively used for images and requires passing in of a particular imageview to display the output. Glide can be used for images, video stills, and gifs.
+
+Espresso and Mockito
+
+Espresso:
+A quick and easy to use API that allows a developer to quickly write automated android UI tests.
+
+BDD (Behavior Driven Development)
+A software development process that emerged from TDD. It uses the same principle of writting tests first to simulate program specifications, and then writting the code to fit around those tests. While TDD focuses on specific output for specific units of code in an overall process, BDD focuses around the behavior of an app and the suspected outcomes when a user commits to certain actions. Like TDD, BDD tests are automated and break the behavior of the code down to a point where it can tell you exactly what actions aren't resulting in the expected outcomes.
+
+TDD (Test Driven Development)
+A software development process that relies on creation of very short and basic level test cases. Specific test cases are to be developed for any new feature added to the software, and then the software is to be developed to match those specific test cases. The advantages include assuring the code is designed from the begining to meet client requirements, as well as provide automated tests that can be run on command if the code gets broken, letting a developer know exactly what parts of the code aren't outputting the expected results.
+
+Green/Red/Refactor
+Known as the Test Driven Development montra. TDD constantly runs certain steps that have suspected outcomes (red - fail, green - success), and refactors the tests several times with different cases. It increases productivity and confidence in the code to test it as it is being developed, rather than spending time testing it following the development of the code.
