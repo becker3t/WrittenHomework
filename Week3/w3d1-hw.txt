@@ -50,6 +50,8 @@ In Android Studio, open a new module. If you want to include any code from anoth
 What is FireBase?
 A Library that makes storing user generated content (Documents, pictures, etc...) directly to Google Cloud Storage, allowing you to free up local space on your applications. Handles everything securely and can be supported from mobile device to web browsers.
 
+ALSO, it does a lot of other things along with cloud storage. It is a platform that allows develepors to test their application thuroughly in order to take an application from prototype phase to final product phase. Several services provide a way for developers to easily integrate features into their app using their API, but also contains tools that allows you to manage your app and customize it based on your audience, manage ads on your app and for your app, etc...
+
 Firebase account: beckertdev@gmail.com
 
 gradle implementation:

@@ -23,6 +23,9 @@ Espresso and Mockito
 Espresso:
 A quick and easy to use API that allows a developer to quickly write automated android UI tests.
 
+Mockito:
+A unit testing library that allows users to easily create mock objects and test specific parts of code at a time (rather than everything at once), and confirming whether the results were expected or unexpected.
+
 BDD (Behavior Driven Development)
 A software development process that emerged from TDD. It uses the same principle of writting tests first to simulate program specifications, and then writting the code to fit around those tests. While TDD focuses on specific output for specific units of code in an overall process, BDD focuses around the behavior of an app and the suspected outcomes when a user commits to certain actions. Like TDD, BDD tests are automated and break the behavior of the code down to a point where it can tell you exactly what actions aren't resulting in the expected outcomes.
 
