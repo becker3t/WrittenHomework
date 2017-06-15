@@ -8,17 +8,12 @@ http://avajava.com/tutorials/categories/design-patterns
 CREATIONAL DESIGN PATTERN
 
 Singleton:
-    A class that is designed to only have one instance of itself at a time. This is accomplished using a static variable that represents an instance
-    of that class.  The constructor remains empty, while there is a corresponding method getInstance() method that will return the instance of that
-    static variable.  If the variable is currently null, getInstance creates the instance there and will allow it to be shared by any class that
-    wants to access the singleton.
+    A class that is designed to only have one instance of itself at a time. This is accomplished using a static variable that represents an instance of that class.  The constructor remains empty, while there is a corresponding method getInstance() method that will return the instance of that static variable.  If the variable is currently null, getInstance creates the instance there and will allow it to be shared by any class that wants to access the singleton.
 
-    Example: A class that stores data in real time that will be accessed by multiple threads.  It gaurantees each thread has access to the same data
-    at the same time.
+    Example: A class that stores data in real time that will be accessed by multiple threads.  It gaurantees each thread has access to the same data at the same time.
 
 Factory:
-    A creational design pattern that instantiates and returns an object based on the data passed into the factory. The different types of objects that 
-    are returned from a factory typically are subclasses of a common parent class.
+    A creational design pattern that instantiates and returns an object based on the data passed into the factory. The different types of objects that are returned from a factory typically are subclasses of a common parent class.
 
     Example: A machineFactory class that can create multiple machinges extending type Machine (ATM machine, Vending machine, etc...)
 
@@ -48,6 +43,4 @@ Prototype
     currently.  You can clone the first programmer, store the clone, and replace the data when you have the second programmer's data.
 
     Answer fo interview: When cloning a large object it simplifies the duplication process.
-
-STRUCTURAL DESIGN PATTERN
 

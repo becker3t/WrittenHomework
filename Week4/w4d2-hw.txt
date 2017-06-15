@@ -1,0 +1,12 @@
+Finish app from yesterday's exam.
+*Use recyclerview, cardview
+*Use Glide to load image detail
+*Use Retrofit/ GSON
+
+Use MVP 
+(Main/ListActivity, MainPresenter, MainContract) - list feature
+(DetailActivity, DetailPresenter, DetailContract) - details feature
+
+
+
+Keep doing codelab.

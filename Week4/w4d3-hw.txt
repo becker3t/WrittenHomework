@@ -1,0 +1,15 @@
+HW
+
+Come up with a detail presenter test case.
+
+Research:
+
+	ContentProviders (What they are, what they do, why do we use them)
+An interface that help an application manage access to data stored by itself, stored by other apps, and provide a way to share data with other apps. It gives the developer more control over gathering required permissions to read and write data to different data storage areas, and you can restrict the content provider to only be accessible through your app or make it visible to other apps as well. ContentProviders are versatile, because they crreate a single abstract way to access several types of data through several different mediums.
+
+	SDK's available for social media (Twitter, FB, Instagram, etc...)
+Facebook, Twitter, GooglePlus, LinkedIn, Instagram, Tumblr (Jumblr)...
+All are available to compile inside fo the app.gradle file.
+
+	Runtime permissions (what are they, what release were they introduced)
+Released in Android 6.0 (API 23), users are able to grant permissions during runtime of the application, rather than on the application installation. These permissions are divided into two categories: Normal and Dangerous.

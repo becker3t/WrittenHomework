@@ -1,0 +1,86 @@
+Watch video and write a summary.
+https://www.youtube.com/watch?v=vdasFFfXKOY
+
+Summary:
+Android recently has gone through great lengths to make app testing easier. The Android team developed the Espresso language as an easy way to create UI testing. Architecture patterns like MVC and MVP can be maintained and tested independently of one another. One thing Android team sought to eliminate were the possibilities of flaky testing. One way testing can be flaky is through external dependencies (network calls, which can fail on many steps independent of your testing, device storage, etc...). A cool workaround the came up with involves creating a new flavor in the app's build file, which allows you to replace data that would be grabbed through this external dependency with mock data that simulates receiving that data, but doesn't require using the external software to get the data. This also allows for app testing before certain features are ready to be used or implemented (i.e. an API you need to sue isn't ready yet). Unit tests can be written and run individually or run all at once using ./gradlew test. Android espresso API works using a Find/Perform/ and Check framework, which it finds the current view, performs an action, and checks to see if the action triggered the proper reaction. The Android Testing API's are much more powerful than they used to be, and their dev team is aiming to make them even stronger and easier to implement in the future.
+
+Start this codelab.
+https://codelabs.developers.google.com/codelabs/android-testing/index.html#0
+
+Out of these categories, pick three I'm most comfortable dealing with and why.
+eCommerce, Finance, Transportation, Services & Toolbox, Medical Services, Food
+
+eCommerce: I'm familiar with the functiounality of eCommerce applications and have used them often.
+
+Food: I have a bit of a background working for resteraunts and have had my complaints with certain food apps (like grubhub) and have ideas as to how I could have made them function better.
+
+Transportation: I've worked with transportation and geolocation api's in the past.
+
+Answer questions from exam:
+
+1. What is the Android lifecycle?
+OnCreate -> OnStart -> OnResume -> app runs -> OnPause -> OnStop -> OnDestroy and OnRestart which is the only one that's not gauranteed to be called.
+They are a set of callback functions provided to developers for setup and tear-down of an Activity.
+
+2. What’s an intent?
+The messaging system in Android. Used to send messages between components as well as start new Components.
+
+3. If I'm in Activity A and I enter Activity B, what are the callbacks triggered?
+A: OnPause -> OnStop ... B: OnCreate -> OnStart -> OnResume
+
+4. If I'm in Activity A, then I enter Activity B and then press the back button, what are the callbacks triggered?
+A: OnPause -> OnStop ... B: OnCreate -> OnStart -> OnResume ... B: OnPause -> OnStop ... A: OnRestart -> OnStart -> OnResume
+
+5. How can I send information from an Activity to another Activity?
+Using Intents and Bundles there are a set of methods that allow developers to pass in multiple types of data using key, value pairs. Data gets stored inside of the Bundles and Bundles get stored into Intents using the putExtras() method.
+
+6. What is the difference between an Activity and a Fragment?
+Fragments cannot exist without an activity. Fragments can be created and destroyed programatically. Fragments have a seperate lifecycle from its parent activity.
+
+7. How to communicate a Fragment with an Activity?
+We need to implement a communication interface (which is definied in the Fragment class and implemented in the parent Activity).
+
+8. How to communicate a Fragment with another Fragment?
+Both fragments must define their own communication interface which are implemented in the parent Activity. The Activity can then act as the Controller (middle man) to communicate from one Fragment to another.
+
+9. What is the difference between a Service and an Activity?
+Services are designed to perform long running operations with no user interaction. Activities are designed to perform shorter tasks and handle user input.
+
+10. What are the different types of Services?
+Start Services, Scheduled Services, Bound Services, IntentServices.
+
+11. What is the lifecycle of a Service?
+OnCreate -> OnStart -> OnDestroy
+OnPause can be called to pause the service. OnStop can be called but it automatically triggers the OnDestroy.
+
+12. How can I make a network request without using a third-party library?
+HttpURLConnection class. Can be used but will have to be executed on a seperate thread, and will need a handler in order to get your results back to the main thread.
+
+13. How can I have Retrofit to load my API information?
+Compile the library in your gradle file. Create your response entity Java classes. Define the RetrofitServiceInterface which declares all abstract methods that correlate to an API endpoint (GET, POST, PUT, or DELETE). Construct the retrofit instance using its builder (pass in the baseURL).
+
+14. Common library for parsing JSON?
+GSON, Moshi, Jackson, etc...
+
+15. What is Firebase?
+A mobile backend API that provides a wide variety of services that simplifies adding specific back-end tasks to an application substantially.
+
+16. How do you enable Firebase in your Android project?
+Create android project.
+Create firebase project, connect and verify it using the android package name and SHA-1 key.
+Add the GoogleJson file to the root of the app module directory.
+Add classpath to project gradle file, as well as add the google-services plugin to the app gradle file.
+
+17. How to setup Push Notifications with Firebase? ******
+Add proper library to app gradle file.
+Create a subclass of the FirebaseMessagingService that listens for push notifications. Then declare it in the app manifest.
+Create a notification in the Firebase backend and send it to desired users.
+
+18. What is unit testing?
+Disect an application's logic into its most basic steps, create tests that cover these units in its various successful scenarios as well as failure scenarios. When the tests are written, the underlying code is then created to pass those specific tests.
+
+19. What is instrumentation testing?
+Tests the relationship the logic of your program versus the system; how well your design works between your logic and the business rules.
+
+20. What is behavioral testing?
+Behavioral testing tests against the system as a whole. Enable functionality of the app and test that the app is behaving correctly. Doesn't factor in best practices and standards, just cares if the app is functioning the way it should in specific scenarios.

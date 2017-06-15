@@ -65,11 +65,7 @@ READ_EXTERNAL_STORAGE
 WRITE_EXTERNAL_STORAGE
 
 Research EasyPermissions library.
-    A library built to help simplify Android's permission logic.  It is designed to work for Android Marshmellow and higher.  It allows a developer to
-    acquire necessary permissions for their app inside of their Activity or Fragment files rather than explicitly requesting all permission in 
-    the Manifest file.  This helps organize permissions by asking for them inside of the files that require the permissions, rather than just having
-    them all in one block of permission requests that can clutter up the Manifest file.
+    A library built to help simplify Android's permission logic.  It is designed to work for Android Marshmellow and higher.  It allows a developer to acquire necessary permissions for their app inside of their Activity or Fragment files rather than explicitly requesting all permission in the Manifest file.  This helps organize permissions by asking for them inside of the files that require the permissions, rather than just having them all in one block of permission requests that can clutter up the Manifest file. (It also allows the user to be asked for specific permissions exactly when they are needed).
 
 Research how to replace a switch for a HashMap.
-    A hashmap can store Callable objects, which are snippets of code that can be executed on command.  Pair it with a key in a Hashmap and it
-    can function exactly like a switch statment.
+    A hashmap can store Callable objects, which are snippets of code that can be executed on command.  Pair it with a key in a Hashmap and it can function exactly like a switch statment.

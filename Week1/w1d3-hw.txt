@@ -27,25 +27,23 @@ Using the Intent class, you can use the method putExtra() to add any primitive o
 That data is accessible in the following activity that the intent is launching.
 
 What is the difference between an Activity and a Fragment?
-To put it simply, they are similar, but a fragment can be thought of as a sub-activity. It has it's own view and has a similar lifecycle to
-an activity, but fragments are put inside of an activity.  This allows a developer to have several different views and processes
-in one screen (activity), while keeping all of the views and source code seperate from each other and organized.
+To put it simply, they are similar, but a fragment can be thought of as a sub-activity. It has it's own view and has a similar lifecycle to an activity, but fragments are put inside of an activity.  This allows a developer to have several different views and processes in one screen (activity), while keeping all of the views and source code seperate from each other and organized.
 
 When is the onDestroy method called?
-When the user manually force closes the application. In most cases when a user navigates away from an activity, it is not destroyed.  Rather, it
-stays allocated in memory to save the current app state and conserve processing power when the activity is re-opened
+When the user manually force closes the application. In most cases when a user navigates away from an activity, it is not destroyed. Rather, it stays allocated in memory to save the current app state and conserve processing power when the activity is re-opened
 
 How can you guarantee backwards compatibility in Android?
-Set the app's minimum API, which will keep you from using any features that are not available in API versions lower than the minimum allowed.
+Set the app's minimum API, which will keep you from using any features that are not available in API versions lower than the minimum allowed. Android also provides AppCompat libraries to provide newer features to older versions of android.
 
 What are the lifecycle callbacks that are guaranteed to happen in an Activity?
 In the full life-cycle, OnCreate -> OnStart -> OnResume -> app is running -> OnPause -> OnStop -> OnDestroy
 The only one that isn't guaranteed is OnRestart.
 
 Can I destroy an Activity?
-When and intent is launched and a new activity is starting, the old activity can call the finish() function to get
+When an intent is launched and a new activity is starting, the old activity can call the finish() function to get
 the old activity to call its OnDestroy()
 
 I want to get information back from an Activity, how can I do that?
 When an Activity is launched with an Intent object, information inside of that intent can be accessed using the getExtras method.
-That returns a Bundle which contains all of the information sent from the previous activity
+That returns a Bundle which contains all of the information sent from the previous activity.
+You can also use the startActivityForResult method that allows you to launch an intent that is served for a specific purpose, and brings data back to you (i.e. opening the camera app to take a picture and bring the data back to you.) Data is then given back in the onActivityResult method.

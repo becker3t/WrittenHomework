@@ -1,0 +1,56 @@
+What is the Android Lifecycle?
+OnCreate -> OnStart -> OnResume -> app runs -> OnPause -> OnStop -> OnDestroy and OnRestart which is the only one that's not gauranteed to be called.
+
+What is an Intent?
+The messaging system in Android. Used to send messages between components as well as start new Components.
+
+Difference between Fragments and Activities?
+Fragments cannot exist without an activity. Fragments can be created and destroyed programatically. Fragments have a seperate lifecycle from its parent activity.
+
+How do we communicate a Fragment with its activity?
+We need to implement a communication interface (which is definied in the Fragment class and implemented in the parent Activity).
+
+How do we communicate from one Fragment to another Fragment?
+Both fragments must define their own communication interface which are implemented in the parent Activity. The Activity can then act as the Controller (middle man) to communicate from one Fragment to another.
+
+Difference between Service and Activities?
+Services are designed to perform long running operations with no user interaction. Activities are designed to perform shorter tasks and handle user input.
+
+Types of Services?
+Start Services, Scheduled Services, Bound Services, IntentServices.
+
+Lifecycle of a Service?
+OnCreate -> OnStart -> OnDestroy
+OnPause can be called to pause the service. OnStop can be called but it automatically triggers the OnDestroy.
+
+How do you make a network request natively in Android?
+HttpURLConnection class. Can be used but will have to be executed on a seperate thread, and will need a handler in order to get your results back to the main thread.
+
+How can you use retrofit to load API information.
+Compile the library in your gradle file. Create your response entity Java classes. Define the RetrofitServiceInterface which declares all abstract methods that correlate to an API endpoint (GET, POST, PUT, or DELETE). Construct the retrofit instance using its builder (pass in the baseURL).
+
+Common library for parsing JSON?
+GSON, Moshi, Jackson, etc...
+
+What is Firebase?
+A mobile backend API that provides a wide variety of services that simplifies adding specific back-end tasks to an application substantially.
+
+How do you enable firebase in your project?
+Create android project.
+Create firebase project, connect and verify it using the android package name and SHA-1 key.
+Add the GoogleJson file to the root of the app module directory.
+Add classpath to project gradle file, as well as add the google-services plugin to the app gradle file.
+
+How do you set up push notifications through firebase?
+Add proper library to app gradle file.
+Create a subclass of the firebase messaging service that listens for push notifications.
+Create a notification in the Firebase backend and send it to desired users.
+
+What is Unit Testing?
+Disect an application's logic into its most basic steps, create tests that cover these units in its various successful scenarios as well as failure scenarios. When the tests are written, the underlying code is then created to pass those specific tests.
+
+What is Instrumentation Testing?
+Testing apps on different devices?
+
+What is Behavioral Testing?
+Enable functionality of the app and test that the app is behaving correctly. Doesn't factor in best practices and standards, just cares if the app is functioning the way it should in specific scenarios.
