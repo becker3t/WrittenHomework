@@ -1,0 +1,5 @@
+HW
+
+Research and create an app that uses Local Broadcast Manager (do it application-wide so no other process will know about this broadcast).
+
+

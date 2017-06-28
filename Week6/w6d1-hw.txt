@@ -1,0 +1,3 @@
+research this:
+
+http://frogermcs.github.io/dependency-injection-with-dagger-2-custom-scopes/

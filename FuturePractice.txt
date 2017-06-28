@@ -1,0 +1,16 @@
+Practice, extra help, and staying up to date...
+
+https://android-arsenal.com/
+A place to find some cool implementations for some features not readily available in Android SDK.
+
+https://caster.io/
+Android tutorials. Crazy amounts of courses.
+
+http://codepath.com/
+more courses and tutorials
+
+https://www.javacodegeeks.com/
+Java tutorials
+
+http://androidweekly.net/
+A weekly update on Android.

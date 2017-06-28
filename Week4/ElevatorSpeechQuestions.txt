@@ -1,0 +1,23 @@
+1. What inferences can you make about the environment/role/scope of work based on the JD?
+
+I can tell that the position will be a senior level environment where I will be mentoring and guiding junior level developers through the development of the app. I can tell the project is likely just starting development, considering they are looking for a developer who is familiar with the full development lifecycle from start to finish.
+
+
+
+2. What questions will you form to ask the interviewer in a senior, diagnostic approach based on the JD? (Seniors ask questions, record data about the environment during the interview, and propose possible solutions. Juniors just answer questions.)
+
+What third party libraries or frameworks will you be using and what will you use them for?
+
+I noticed you're looking for someone familiar with Phonegap, I'm curious as to why you decided to use that rather than the native Android and iOS SDK's?
+
+How big is your team? How many junior developers will be working on this project?
+
+How far along is the development of this project? Has there been any design done yet? Have you decided on an overall architecture pattern like MVC or MVP?
+
+
+
+3. What are the possible pain points of the client based on the JD?
+
+The biggest one I can see is that they are looking for a developer who is familiar with the full project lifecycle from start to finish. The JD specifically brings this up as well as the fact that they want somebody who is familiar with how to properly distribute an app to its destination (either a public app store or a private internal distribution network.
+
+The second big one that pops out is that they are looking for someone with experience with hybrid development tools. They specifically mention phonegap and IBM worklight, as well as one of their desired qualifications is familiarity with these technologies.

@@ -1,0 +1,33 @@
+HW
+
+Dependency Injection is a design pattern that uses a concept called "Inversion of Control", which means that objects should not have to creat/ instantiate other objects in which it relies on to work. Dependency injection is a framework that allows this to happen without object intervention.  The idea behind this is to decouple code (objA needs objB, but objA doesn't make objB inside of its own scope, rather a DependencyInjection library allows you to create that class seperate from objA, and inject objB into objA).
+
+Two libraries for Dependency Injection (Dagger, Butterknife)
+
+Differences between dagger 2 and Dagger 1
+
+Dagger 2 does not allow reflection, meaning everything is done as a concrete call.
+Improved performance, no more runtime graph composition
+Code is more readable and easier to follow
+Supports method injection in addition to constructor injection
+Requires less configuration than Dagger 1
+
+What are the main parts of dagger ? (Hint there are three)
+DataManager - expresses dependencies of application and provides all the apis to access the data of the app.
+Provider
+
+Modules - a class that provides the methods the provide the dependency
+Components
+Annotations
+
+What are the main Dagger annotations?
+@Module
+@Providers
+@PerActivity
+@Component
+@ApplicationContext
+@ActivityContext
+@Named
+@Inject
+
+Finish Matrix.

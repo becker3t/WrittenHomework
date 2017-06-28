@@ -1,0 +1,21 @@
+Key notes for elevator speech.
+
+
+I'm a full stack android developer with 5 years of IT experience, all of which with Android.
+
+Over the years I've held many different responsibilities from project management, to design and development ranging from several different stages of the development lifecycle.
+
+My most recent project was with Bonefish grill out in Tampa, FL. I worked as a lead developer on an application to be used by their customers to make reservations, check on their wait times, easily split their bill among their friends they are with, and overall better the experience of the customer coming to visit the restaurant.
+
+I've used the TDD methodology through several projects of mine including Bonefish Grill, Sears, and Old Navy. I've implemented unit tests using JUnit, Robolectric, and Espresso in accordance with TDD and developed my projects around those tests.
+
+I've recently finished my previous project with Bonefish Grill and I'm excited to move on to my next oppurtunity.
+
+
+
+
+**Mention specific technologies. Give substance, rather than fluff.
+**You can say "I've worn many hats and been a part of several different development environments (from solo, to paired, to team based agile). But make it quick and move on.
+**Talk about most recent project, quick summary.
+**Talk about specific technology or two that the job description mentions, give an example.
+**Conclude with your availability. I've finished up my previous project and am available for immediate hire.

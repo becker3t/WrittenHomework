@@ -1,0 +1,7 @@
+HW
+
+Do the interview code exercise.
+
+Create a seperate app that consumes the Movie-ContentProvider. Grab Luis's code and interact with it using another app (using a ContentResolver) . (Put, update, and install stuff in app B using the content provider in app A.
+
+Monday Test. Cover everything.
